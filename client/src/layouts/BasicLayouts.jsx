@@ -1,8 +1,9 @@
 import React from "react";
+import { Outlet } from "react-router";
 
-function BasicLayouts(props) {
+function BasicLayouts() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <header className="bg-indigo-800 text-white py-4 shadow-md flex flex-col sm:flex-row items-center justify-between px-6">
         <div className="text-2xl font-semibold flex items-center gap-2">
           <span role="img" aria-label="notes">
@@ -19,11 +20,13 @@ function BasicLayouts(props) {
           </div>
         </div>
       </header>
-      <main className="bg-white"></main>
-      <footer className="bg-indigo-100 text-indigo-700 text-xs text-center  border-t">
+      <main className="bg-white flex-1">
+        <Outlet />
+      </main>
+      <footer className="bg-indigo-100 text-indigo-700 text-xs text-center border-t">
         © {new Date().getFullYear()} Notes App. All rights reserved.
       </footer>
-    </>
+    </div>
   );
 }
 
