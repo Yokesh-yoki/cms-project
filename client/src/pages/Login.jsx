@@ -1,18 +1,17 @@
 import React, { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigte = useNavigate();
   const HandleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically handle the login logic, e.g., API call
     if (email && password) {
-      Swal.fire({
-        title: "Login Successful",
-        text: "Welcome back!",
-        icon: "success",
-      });
+      console.log("Login successful", { email, password });
+      navigte("/dashboard/intro");
     } else {
       Swal.fire({
         title: "Error",

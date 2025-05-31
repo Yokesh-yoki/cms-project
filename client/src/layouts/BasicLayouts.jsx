@@ -5,7 +5,7 @@ import Login from "../pages/Login";
 function BasicLayouts() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <header className="bg-gradient-to-r from-indigo-900 via-purple-600 to-pink-500 text-white py-5 shadow-lg flex flex-col sm:flex-row items-center justify-between px-8">
+      <header className=" z-10 shadow-lg bg-gradient-to-r from-indigo-900 via-purple-600 to-pink-500 text-white py-5 flex flex-col sm:flex-row items-center justify-between px-8 ">
         <div className="text-3xl font-bold flex items-center gap-3 tracking-tight">
           <span role="img" aria-label="notes" className="text-4xl">
             <Link to={"/"}>👨‍💻</Link>
@@ -29,11 +29,11 @@ function BasicLayouts() {
           </Link>
         </div>
       </header>
-      <main className="flex-1  ">
+      <main className="flex-1">
         <Outlet />
       </main>
       <footer className="bg-gradient-to-r from-indigo-100 via-white to-indigo-200 text-indigo-700 text-xs text-center border-t py-3 tracking-wide">
-        © {new Date().getFullYear()} Notes App. All rights reserved.
+        © {new Date().getFullYear()} My App. All rights reserved.
       </footer>
     </div>
   );
