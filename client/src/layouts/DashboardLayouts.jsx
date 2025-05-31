@@ -4,6 +4,9 @@ import { Link, Outlet } from "react-router";
 const paths = [
   { path: "/dashboard/intro", text: "Intro" },
   { path: "/dashboard/todolist", text: "TodoList" },
+  { path: "/dashboard/calc", text: "Calculator" },
+  { path: "/dashboard/counter", text: "Counter" },
+  { path: "/dashboard/stopwatch", text: "Stopwatch" },
 ];
 function DashboardLayouts(props) {
   return (

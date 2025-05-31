@@ -10,6 +10,9 @@ import Intro from "../pages/Dashboard/Intro";
 import TodoList from "../pages/Dashboard/TodoList";
 import { AuthProvider } from "../context/AuthContext";
 import PrivateRoutes from "./PrivateRoutes";
+import Counter from "../pages/Dashboard/Counter";
+import StopWatch from "../pages/Dashboard/StopWatch";
+import Calculator from "../pages/Dashboard/Calculator";
 
 function AppRoutes() {
   return (
@@ -30,6 +33,9 @@ function AppRoutes() {
       >
         <Route path="/dashboard/intro" element={<Intro />} />
         <Route path="/dashboard/todolist" element={<TodoList />} />
+        <Route path="/dashboard/counter" element={<Counter />} />
+        <Route path="/dashboard/stopwatch" element={<StopWatch />} />
+        <Route path="/dashboard/calc" element={<Calculator />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
