@@ -23,36 +23,57 @@ function Login(props) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[85vh] bg-gray-100">
-      <h1 className="text-6xl font-bold text-indigo-800 mb-4">Login</h1>
-      <h2 className="text-2xl font-semibold text-indigo-800 mb-2">
-        Welcome Back!
-      </h2>
-      <p className="text-gray-600 mb-6">
-        Please enter your credentials to access your account.
-      </p>
-      <form onSubmit={HandleSubmit} className="w-full max-w-sm">
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded w-full"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded w-full"
-        />
-        <button
-          type="submit"
-          className="px-6 py-2 bg-indigo-900 text-white rounded-lg shadow hover:bg-indigo-800 transition"
-        >
+    <div className="flex flex-col items-center justify-center min-h-[85vh] bg-gradient-to-br from-indigo-100 via-white to-indigo-200">
+      <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-sm border border-indigo-100">
+        <h1 className="text-3xl font-bold text-indigo-900 mb-2 text-center">
           Login
-        </button>
-      </form>
+        </h1>
+        <h2 className="text-lg font-medium text-indigo-700 mb-1 text-center">
+          Welcome Back!
+        </h2>
+        <form onSubmit={HandleSubmit} className="w-full space-y-4">
+          <div>
+            <label
+              className="block text-indigo-700 font-medium mb-1"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="p-2 border border-indigo-200 rounded w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+              autoComplete="username"
+            />
+          </div>
+          <div>
+            <label
+              className="block text-indigo-700 font-medium mb-1"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="p-2 border border-indigo-200 rounded w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+              autoComplete="current-password"
+            />
+          </div>
+          <button
+            type="submit"
+            className="px-4 py-2 bg-indigo-700 text-white rounded shadow hover:bg-indigo-800 transition font-semibold w-full text-base"
+          >
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
