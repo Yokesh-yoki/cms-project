@@ -8,6 +8,8 @@ import Signup from "../pages/Signup";
 import DashboardLayouts from "../layouts/DashboardLayouts";
 import Intro from "../pages/Dashboard/Intro";
 import TodoList from "../pages/Dashboard/TodoList";
+import { AuthProvider } from "../context/AuthContext";
+import PrivateRoutes from "./PrivateRoutes";
 
 function AppRoutes() {
   return (
@@ -18,7 +20,14 @@ function AppRoutes() {
         <Route path="/signup" element={<Signup />} />
       </Route>
 
-      <Route path="/dashboard" element={<DashboardLayouts />}>
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoutes>
+            <DashboardLayouts />
+          </PrivateRoutes>
+        }
+      >
         <Route path="/dashboard/intro" element={<Intro />} />
         <Route path="/dashboard/todolist" element={<TodoList />} />
       </Route>
