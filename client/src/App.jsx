@@ -1,11 +1,10 @@
-import './App.css'
-import Home from './pages/Home'
+import React from "react";
+import AppRoutes from "./routes/Approutes";
 
-function App() {
-  
+function App(props) {
   return (
     <>
-     <Home/>
+      <AppRoutes />
     </>
   );
 }
