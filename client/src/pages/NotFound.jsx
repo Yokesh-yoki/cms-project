@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NotFound(props) {
+function NotFound() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen" style={{ backgroundColor: '#E6E6FA' }}>
             <div className="rounded-3xl px-16 py-12 bg-white/95">
