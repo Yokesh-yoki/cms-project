@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-function Signup(props) {
+function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const HandleSubmit = (e) => {
